@@ -41,7 +41,7 @@ end
 
 
 
-function countdates(x)
+function countdates(x,p)
     x = string(x)
     B =[]
     A = 0
@@ -55,8 +55,12 @@ function countdates(x)
     println("the year you put has $(A) such dates")
     if length(B) > 0
         println("and they are ")
-        for l in B
-            println("$(l)")
+        if p ==0
+            for l in B
+                println("$(l)")
+            end
+        else
+            return B
         end
     end
 end
