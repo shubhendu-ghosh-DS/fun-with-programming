@@ -12,7 +12,3 @@ end
 
 
 
-function datecount(x)
-    y = string(x)
-    return uniqchar(y)
-end
