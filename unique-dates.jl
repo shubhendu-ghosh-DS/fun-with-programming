@@ -23,16 +23,21 @@ function zeroDD(x)
 end
 
 
-function leastdigit()
+function leastdigit(n)
+    D = []
     for i in 2000:3000
         for j in 1:12
             for k in 1:31
                 s = "$(zeroDD(k))"*"$(zeroDD(j))"*"$(i)"
                 s1 = "$(zeroDD(k))/"*"$(zeroDD(j))/"*"$(i)"
-                if uniqchar(s) == 2
-                    println(s1)
+                if uniqchar(s) == n
+                    append!(D,[s1])
                 end
             end
         end
     end
+    return D
 end
+
+
+
