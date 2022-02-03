@@ -110,3 +110,13 @@ function highest(p)
 end
 
 
+
+
+
+
+uniqchar("shubhendu ghosh)
+zeroDD(7)
+leastdigit(2)
+countdates(2022,2)
+which_year()
+highest(2)
