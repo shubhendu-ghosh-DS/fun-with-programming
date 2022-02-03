@@ -73,4 +73,27 @@ end
 
 
 
+function which_year()    
+    G =[]
+    for k in leastdigit(2)
+        k1 = k[end - 3:end]
+        if k1 ∈ G
+            continue
+        else
+            append!(G, [k1])
+        end
+    end
+    return G
+end
+
+
+function highest()
+    D = Dict()
+    for x in which_year()
+        y = countdates(x,2)
+        D[x] = y
+    end
+    return D
+end
+
 
