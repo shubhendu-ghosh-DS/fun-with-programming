@@ -87,13 +87,26 @@ function which_year()
 end
 
 
-function highest()
+function highest(p)
     D = Dict()
     for x in which_year()
         y = countdates(x,2)
         D[x] = y
     end
-    return D
+    if p ==0
+        return D
+    else
+        val = []
+        key =[]
+        for i in values(D)
+            push!(val,i)
+        end
+        for j in keys(H)
+            push!(key,j)
+        end
+        maxx,pos = findmax(val)
+        println("The year $(key[pos]) has the highest number of dates that can be written using only two digits. It has $(maxx) such occurance")
+    end
 end
 
 
