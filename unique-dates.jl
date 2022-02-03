@@ -52,18 +52,23 @@ function countdates(x,p)
             append!(B,[i])
         end
     end
-    println("the year you put has $(A) such dates")
-    if length(B) > 0
-        println("and they are ")
-        if p ==0
-            for l in B
-                println("$(l)")
+    if p == 2
+        return length(B)
+    else
+        println("the year you put has $(A) such dates")
+        if length(B) > 0
+            println("and they are ")
+            if p == 1
+                for l in B
+                    println("$(l)")
+                end
+            elseif p == 0
+                    return B
             end
-        else
-            return B
         end
     end
 end
+ 
 
 
 
