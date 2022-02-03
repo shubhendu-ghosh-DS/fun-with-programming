@@ -41,3 +41,27 @@ end
 
 
 
+function countdates(x)
+    x = string(x)
+    B =[]
+    A = 0
+    for i in leastdigit(2)
+        y = i[end - 3:end]
+        if x == y
+            A += 1
+            append!(B,[i])
+        end
+    end
+    println("the year you put has $(A) such dates")
+    if length(B) > 0
+        println("and they are ")
+        for l in B
+            println("$(l)")
+        end
+    end
+end
+
+
+
+
+
