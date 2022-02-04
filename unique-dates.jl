@@ -1,3 +1,6 @@
+#this program is a way to see which dates can be written using just two digits
+
+#this function returns the unique character in a string
 function uniqchar(x)
     D =[]
     for i in x
@@ -12,7 +15,7 @@ end
 
 
 
-
+#we read 3/4/2020 as 03/04/2020. This function does just that. adds a zero before single digit days or month
 function zeroDD(x)
     if x<10
         val = "0$(x)"
