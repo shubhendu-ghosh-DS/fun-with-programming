@@ -121,7 +121,7 @@ end
 
 
 
-
+#calling the functions
 uniqchar("shubhendu ghosh)
 zeroDD(7)
 leastdigit(2)
