@@ -93,7 +93,8 @@ function which_year()
     return G
 end
 
-
+#This function takes one argument, if p = 0, then it will simply return a dictinary that contains yhe year and their occurance of such dates
+#if p = any other number, the it will return a string stating that which year contains the most of such dates and how many of them are there in that year
 function highest(p)
     D = Dict()
     for x in which_year()
