@@ -25,7 +25,8 @@ function zeroDD(x)
     return val
 end
 
-
+#this function returns the dates which can be expressed using only n digits. 
+#Note: this is suitable only for n = 2. for n = 3 or more we would have to adjust the function, like 31st of feb will be present there if n = 3 is taken
 function leastdigit(n)
     D = []
     for i in 2000:3000
@@ -43,7 +44,10 @@ function leastdigit(n)
 end
 
 
-
+#this takes two parameter. x : year, p = [0,1,2]. x is the year in which you want to count how many such dates are possible. 
+#if p = 2, then it will just return the number of such dates possible, p = 1, then it will return  strings stating how many dates are possible. 
+#if there are any it will print them too
+#if p = 0, then it will rwturn a list of dates that can be iterated later.
 function countdates(x,p)
     x = string(x)
     B =[]
