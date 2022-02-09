@@ -1,12 +1,16 @@
 # In this project  we will convert messages into some code( not program)
 # we will be using Random library, so we need to import that
 using Random
+
 # This is the mother string from which code letter will bw drawn
 A1 = "qwertyuiopasdfghjklzxcvbnm"
+
 # These are the special characters
 B = [",",".",";",":","?","-","_","!","@","#","%","&","(",")"]
+
 # we will transform special characters into codes using only these letters
 C = ["@","#","&","_"]
+
 # This is the vector we will draw letter from
 A = []
 for j in A1
@@ -16,6 +20,24 @@ end
 # This is the dictinary that will contain all the words
 D = Dict()
 num = [2,3,4,5,6,7]
+
+
+function times(A,n)
+    if n==2
+        return rand(A)*rand(A)
+    elseif n==3
+        return rand(A)*rand(A)*rand(A)
+    elseif n==4
+        return rand(A)*rand(A)*rand(A)*rand(A)
+    elseif n==5
+        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
+    elseif n == 6
+        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
+    else
+        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
+    end
+end
+
 
 
 # This function will generate code for eah wordss
@@ -36,6 +58,7 @@ function generate(x)
             p = rand(num)
             code = times(A,p)
         end
+        #integrate them into the dicinary
         D["$(k)"] = "$(code)"
     end
 end
@@ -44,21 +67,7 @@ end
     
     
 
-function times(A,n)
-    if n==2
-        return rand(A)*rand(A)
-    elseif n==3
-        return rand(A)*rand(A)*rand(A)
-    elseif n==4
-        return rand(A)*rand(A)*rand(A)*rand(A)
-    elseif n==5
-        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
-    elseif n == 6
-        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
-    else
-        return rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)*rand(A)
-    end
-end
+
 
 generate("we are in this time loop forever")
 
