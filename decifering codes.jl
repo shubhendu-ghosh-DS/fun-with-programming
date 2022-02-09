@@ -1,3 +1,4 @@
+# we will be using Random library, so we need to import that
 using Random
 
 A1 = "qwertyuiopasdfghjklzxcvbnm"
