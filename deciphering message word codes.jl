@@ -73,8 +73,8 @@ end
 
 
 
-generate("we are in this time loop forever")
-
+#This function will display the codes for the words.
+#It uses Recursion algorithm, that means if for some words code isn't present there, then it will generate he code for those word then display the sentence of codes
 function codefo(x)
     sos = []
     state = ""
@@ -86,6 +86,7 @@ function codefo(x)
             state = state*D[kim]*" "
         else
             generate(kim)
+            #Here is the Recursion starts
             codefo(x)
         end
     end
@@ -93,6 +94,16 @@ function codefo(x)
     return state[1:end-1]
 end
 
+#The above function doesn't display the word on the first,  It have a problem. on second try it shows correct codes. so we need another function
+function codefor(x)
+    s = codefo(x)
+    s = codefo(x)
+    return s
+end
+
+
+
+#This function will receive code and return the original english words assigned with the code
 function reverse_code(x)
     rev = ""
     for kol in split(x)
@@ -103,19 +114,14 @@ function reverse_code(x)
                 end
             end
         else
+            # If some code don't have original words corresponding to them, it will display "_" in those places
             rev = rev*"__ "
         end
     end
     return rev[1:end-1]
 end
 
-reverse_code("nep")
 
-function codefor(x)
-    s = codefo(x)
-    s = codefo(x)
-    return s
-end
 
 
 function encrypt(x)
