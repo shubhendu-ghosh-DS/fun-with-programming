@@ -121,18 +121,7 @@ function reverse_code(x)
     return rev[1:end-1]
 end
 
-
-
-
-function encrypt(x)
-    str = ""
-    for i in x
-        str = str*" "*i
-    end
-    str = remove_space(codefor(str),2)
-    return str
-end
-
+#This function will remove spaces between words, it will add % in place of space, or just erase the space
 function remove_space(x, p = 1)
     state = ""
     if p == 1
@@ -147,6 +136,7 @@ function remove_space(x, p = 1)
     return state
 end
 
+# This function will just join some words from a vector into a sentence using a spacbetween them
 function add_space(x)
     str = ""
     for i in x
@@ -154,6 +144,21 @@ function add_space(x)
     end
     return str
 end
+
+
+#This function will encrypt a password into a long string
+function encrypt(x)
+    str = ""
+    for i in x
+        str = str*" "*i
+    end
+    str = remove_space(codefor(str),2)
+    return str
+end
+
+
+
+
 
 function decrypt(x)
     vet = split(x, "%")
