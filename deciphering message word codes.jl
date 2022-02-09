@@ -1,20 +1,24 @@
-# In this project  we will convert messages into some code 
+# In this project  we will convert messages into some code( not program)
 # we will be using Random library, so we need to import that
 using Random
-
+# This is the mother string from which code letter will bw drawn
 A1 = "qwertyuiopasdfghjklzxcvbnm"
+# These are the special characters
 B = [",",".",";",":","?","-","_","!","@","#","%","&","(",")"]
+# we will transform special characters into codes using only these letters
 C = ["@","#","&","_"]
-
+# This is the vector we will draw letter from
 A = []
 for j in A1
     push!(A, j)
 end
 
-
+# This is the dictinary that will contain all the words
 D = Dict()
 num = [2,3,4,5,6,7]
 
+
+# This function will generate code for eah wordss
 function generate(x)
     vec = []
     for j in split(x)
@@ -24,9 +28,11 @@ function generate(x)
         if k ∈ keys(D)
             continue
         elseif k ∈ B
+            # special code for special characters
             q = rand([2,3,4])
             code = times(C,q)
         else
+            #other codes for normal character or words
             p = rand(num)
             code = times(A,p)
         end
