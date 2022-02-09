@@ -22,6 +22,7 @@ D = Dict()
 num = [2,3,4,5,6,7]
 
 
+#This function will generate random combinations of letters from the dictinary given in the argument, the second argument will decide the length of the combinating code
 function times(A,n)
     if n==2
         return rand(A)*rand(A)
