@@ -22,7 +22,9 @@ D = Dict()
 num = [2,3,4,5,6,7]
 
 
-#This function will generate random combinations of letters from the dictinary given in the argument, the second argument will decide the length of the combinating code
+#This function will generate random combinations of letters from the dictinary given in the argument, 
+#the second argument will decide the length of the combinating code
+
 function times(A,n)
     if n==2
         return rand(A)*rand(A)
@@ -41,7 +43,7 @@ end
 
 
 
-# This function will generate code for eah wordss
+# This function will generate code for each words given.
 function generate(x)
     vec = []
     for j in split(x)
@@ -49,6 +51,7 @@ function generate(x)
     end
     for k in vec
         if k ∈ keys(D)
+            #it will skip if the code for the word is already there
             continue
         elseif k ∈ B
             # special code for special characters
