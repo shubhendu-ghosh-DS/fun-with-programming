@@ -52,4 +52,9 @@ function codefor(x,y,z)
     end
     return Str
 end
+
+
+
+
+codefor("TWINKLE", "SVHOJKD", "FILTERS")
     
