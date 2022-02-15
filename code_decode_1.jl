@@ -1,9 +1,55 @@
 le = "abcdefghijklmnopqrstuvwxyz"
 le = uppercase(le)
+Q = split(le, "")
 S = []
-for j in 1:26
-    t = (le[j],j)
+for i in 1:26
+    t = (Q[i], i)
     push!(S,t)
-    
 end
+
 D = Dict(S)
+#print(S)  
+
+
+function pattern(x,y)
+    F = split(x,"")
+    G = split(y, "")
+    d = length(F)
+    J =[]
+    for i in 1:d
+        x = D[F[i]] - D[G[i]]
+        push!(J, x)
+    end
+    return J
+end
+
+
+
+function find(x)
+    if x ∈ values(D)
+        for key in keys(D)
+            if D[key] == x
+                return key
+            end
+        end
+    else
+        x = 26+x
+        find(x)
+    end
+end
+
+
+
+
+function codefor(x,y,z)
+    L = pattern(x,y)
+    if length(x) == length(y) == length(z)
+        Str = ""
+        P = split(z, "")
+        for k in 1:length(P)
+            Str = Str * find(D[P[k]]-L[k])
+        end
+    end
+    return Str
+end
+    
