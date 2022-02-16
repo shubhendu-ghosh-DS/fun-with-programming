@@ -45,7 +45,7 @@ end
 
 
 
-
+# Finally this function will code a new code for a given word, but we will have to give two word as reference
 function codefor(x,y,z)
     L = pattern(x,y)
     if length(x) == length(y) == length(z)
