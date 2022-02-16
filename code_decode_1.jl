@@ -15,7 +15,7 @@ end
 D = Dict(S)
 #print(S)  
 
-
+# This function will find patterns in the code
 function pattern(x,y)
     F = split(x,"")
     G = split(y, "")
