@@ -1,6 +1,6 @@
 #This simple code can decode basic word coding(not programming). investigate patterns and code a new word for a word
 
-
+#all letter should be from normal enmglish letters
 le = "abcdefghijklmnopqrstuvwxyz"
 le = uppercase(le)
 Q = split(le, "")
