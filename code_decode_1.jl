@@ -11,7 +11,7 @@ for i in 1:26
     t = (Q[i], i)
     push!(S,t)
 end
-
+# assign them with numbers and make a dictinary
 D = Dict(S)
 #print(S)  
 
