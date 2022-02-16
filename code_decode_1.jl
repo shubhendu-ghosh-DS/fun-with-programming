@@ -29,7 +29,7 @@ function pattern(x,y)
 end
 
 
-
+# This function will find letter assigned for that number
 function find(x)
     if x ∈ values(D)
         for key in keys(D)
