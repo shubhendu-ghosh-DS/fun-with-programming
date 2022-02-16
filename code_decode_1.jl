@@ -2,7 +2,9 @@
 
 #all letter should be from normal enmglish letters
 le = "abcdefghijklmnopqrstuvwxyz"
+# let us take the upper case letters
 le = uppercase(le)
+#split them as one and make a list
 Q = split(le, "")
 S = []
 for i in 1:26
