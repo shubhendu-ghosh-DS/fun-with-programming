@@ -33,6 +33,23 @@ def to_bin(num):
             num = num//2
         return reverse(bin_str)
 
+    
+    
+def LoU(letter):
+    if letter == letter.lower():
+        return 1
+    else :
+        return 0
+
+    
+def Upp(string):
+    positions = ""
+    for i in range(len(string)):
+        if LoU(string[i]) == 0:
+            positions += ","+str(i)
+    return positions[1:]
+
+    
 
 def fetch_assign(word):
     new = ""
@@ -55,3 +72,23 @@ def fetch_assign(word):
         new1 = new1[1:] 
         new = new + "4" + new1    
         return new
+
+def resurrect(bin_str):
+    strings = bin_str.split('4')
+    strin = strings[0]
+    strin = strin.split("2")
+    poss = strings[1]
+    stem = ""
+    for i in strin:
+        for j in word_dict:
+            if to_bin(word_dict[j]) == i:
+                stem += j
+    
+    positions = poss.split("3")
+    if len(positions) == 1 and positions[0] == '':
+        return stem
+    else :
+        for k in range(len(positions)):
+            positions[k] = to_dec(positions[k])
+        stem = Upr(stem, positions)
+    return stem
