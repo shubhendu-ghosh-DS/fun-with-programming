@@ -73,6 +73,26 @@ def fetch_assign(word):
         new = new + "4" + new1    
         return new
 
+    
+def to_dec(bi):
+    dec = 0
+    bi = reverse(bi)
+    for i in range(len(bi)):
+        dec = dec + (int(bi[i])*2**(int(i)))
+    return dec
+
+def Upr(string, pos):
+    for i in pos:
+        str1 = string[:i]
+        str2 = string[i+1:]
+        new_str = str1+string[i].upper()+str2
+        string = new_str
+    return string
+
+
+    
+    
+    
 def resurrect(bin_str):
     strings = bin_str.split('4')
     strin = strings[0]
