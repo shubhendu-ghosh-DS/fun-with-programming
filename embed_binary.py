@@ -1,3 +1,7 @@
+#This code is made just for fun. 
+# Our object is to encrypt a sentence into a long string of 0s, 1s, 2s, and 3s. so that it will not be understandable to human mind 
+
+
 word = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z, "
 s = word.split(",")
 word = "".join(s)
