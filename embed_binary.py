@@ -112,3 +112,10 @@ def resurrect(bin_str):
             positions[k] = to_dec(positions[k])
         stem = Upr(stem, positions)
     return stem
+
+
+
+
+print(fetch_assign('My name is SHUBHENDU'))
+print(resurrect(fetch_assign("Whatever happens to me i will be there standing with You all the Time")))
+
